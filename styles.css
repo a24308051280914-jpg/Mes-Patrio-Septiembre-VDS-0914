@@ -1,356 +1,47 @@
-/* Colores que usaremos en la página */
-:root{
-  --verde:#1F6E3C;
-  --verde-oscuro:#163E28;
-  --rojo:#B7282E;
-  --crema:#FBF3E7;
-  --texto:#2A2622;
-}
-
-/* Hace que los tamaños funcionen mejor */
-*{
-  box-sizing:border-box;
-}
-
-/* Diseño general de la página */
-body{
-  margin:0;
-  background:var(--crema);
-  color:var(--texto);
-  font-family:'Nunito',sans-serif;
-}
-
-/* Barra de arriba */
-.top-bar{
-  background:var(--verde-oscuro);
-  color:#fff;
-  text-align:center;
-  padding:14px 20px;
-  font-weight:700;
-  letter-spacing:0.5px;
-  font-size:0.95rem;
-}
-
-/* Espacio del menú */
-.nav-wrap{
-  max-width:900px;
-  margin:28px auto 10px;
-  padding:0 20px;
-}
-
-/* Menú de botones */
-.nav-pill{
-  background:var(--rojo);
-  border-radius:999px;
-  display:flex;
-  justify-content:center;
-  gap:6px;
-  padding:8px;
-  flex-wrap:wrap;
-}
-
-/* Botones del menú */
-.nav-pill a{
-  color:#fff;
-  font-weight:700;
-  font-size:1rem;
-  padding:10px 20px;
-  border-radius:999px;
-  text-decoration:none;
-}
-
-/* Botón que está seleccionado */
-.nav-pill a.active{
-  background:#fff;
-  color:var(--rojo);
-}
-
-/* Parte principal */
-.main-content{
-  max-width:980px;
-  margin:0 auto;
-  padding:40px 24px 70px;
-  min-height:55vh;
-}
-
-/* Parte principal de inicio */
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  padding:30px 0 10px;
-}
-
-/* Texto de inicio */
-.hero-text{
-  text-align:left;
-}
-
-/* Nombre del mes */
-.hero .mes{
-  font-family:'Caveat',cursive;
-  font-size:2.6rem;
-  color:var(--texto);
-  margin:0;
-}
-
-/* Título de Mes Patrio */
-.hero h1{
-  font-family:'Caveat',cursive;
-  font-weight:700;
-  font-size:5.5rem;
-  line-height:0.85;
-  margin:4px 0 0;
-}
-
-/* Palabra Mes en verde */
-.hero h1 .word-mes{
-  color:var(--verde);
-  display:block;
-}
-
-/* Palabra Patrio en rojo */
-.hero h1 .word-patrio{
-  color:var(--rojo);
-  display:block;
-  margin-top:-0.05em;
-}
-
-/* Cuadro de la introducción */
-.hero-box{
-  background:var(--rojo);
-  color:#fff;
-  border-radius:20px;
-  padding:28px 30px;
-  max-width:320px;
-  text-align:center;
-  font-size:0.95rem;
-  line-height:1.5;
-}
-
-/* Títulos de las secciones */
-h2.section-title{
-  font-family:'Caveat',cursive;
-  font-weight:700;
-  text-align:center;
-  font-size:3rem;
-  margin:0 0 40px;
-}
-
-/* Parte verde de los títulos */
-h2.section-title .g{
-  color:var(--verde);
-}
-
-/* Parte roja de los títulos */
-h2.section-title .r{
-  color:var(--rojo);
-}
-
-/* Ordena las fechas en columnas */
-.timeline-cols{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:22px 18px;
-}
-
-/* Cambia el tamaño en pantallas pequeñas */
-@media (max-width:760px){
-  .timeline-cols{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-/* En celular deja una sola columna */
-@media (max-width:420px){
-  .timeline-cols{
-    grid-template-columns:1fr;
-  }
-}
-
-/* Diseño de cada fecha */
-.date-card{
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-/* Círculo donde aparece el número */
-.date-badge{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-family:'Caveat',cursive;
-  font-size:1.7rem;
-  font-weight:700;
-  margin-bottom:22px;
-}
-
-/* Círculo verde */
-.date-card.verde .date-badge{
-  background:var(--verde);
-}
-
-/* Círculo rojo */
-.date-card.rojo .date-badge{
-  background:var(--rojo);
-}
-
-/* Cuadro de información de las fechas */
-.date-box{
-  border-radius:16px;
-  padding:20px 16px;
-  height:100%;
-  width:100%;
-}
-
-/* Cuadro verde */
-.date-card.verde .date-box{
-  background:var(--verde);
-  color:#fff;
-}
-
-/* Cuadro rojo */
-.date-card.rojo .date-box{
-  background:var(--rojo);
-  color:#fff;
-}
-
-/* Título de cada fecha */
-.date-box h3{
-  font-family:'Caveat',cursive;
-  font-size:1.5rem;
-  margin:0 0 8px;
-}
-
-/* Texto de cada fecha */
-.date-box p{
-  margin:0;
-  font-size:0.92rem;
-  line-height:1.45;
-}
-
-/* Ordena los personajes */
-.people-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-/* Dos columnas en pantallas pequeñas */
-@media (max-width:720px){
-  .people-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-/* Una columna en celular */
-@media (max-width:480px){
-  .people-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-/* Diseño de cada personaje */
-.person-card{
-  border-radius:16px;
-  padding:18px;
-  display:flex;
-  align-items:center;
-  gap:14px;
-  color:#fff;
-}
-
-/* Personaje con fondo verde */
-.person-card.verde{
-  background:var(--verde);
-}
-
-/* Personaje con fondo rojo */
-.person-card.rojo{
-  background:var(--rojo);
-}
-
-/* Imagen del personaje */
-.avatar{
-  flex:0 0 56px;
-  width:56px;
-  height:56px;
-  border-radius:50%;
-  background:#fff;
-  object-fit:cover;
-}
-
-/* Título del personaje */
-.person-info h3{
-  font-family:'Caveat',cursive;
-  font-size:1.35rem;
-  margin:0 0 4px;
-}
-
-/* Texto del personaje */
-.person-info p{
-  margin:0;
-  font-size:0.85rem;
-  line-height:1.35;
-}
-
-/* Ordena los datos curiosos */
-.facts-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-/* Una columna en pantallas pequeñas */
-@media (max-width:640px){
-  .facts-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-/* Diseño de cada dato */
-.fact-card{
-  border-radius:16px;
-  padding:22px 24px;
-  color:#fff;
-  line-height:1.55;
-  font-size:0.95rem;
-}
-
-/* Dato con fondo verde */
-.fact-card.verde{
-  background:var(--verde);
-}
-
-/* Dato con fondo rojo */
-.fact-card.rojo{
-  background:var(--rojo);
-}
-
-/* Título de cada dato */
-.fact-card strong{
-  display:block;
-  font-family:'Caveat',cursive;
-  font-size:1.3rem;
-  margin-bottom:6px;
-}
-
-/* Parte de abajo de la página */
-.pie{
-  background:var(--verde-oscuro);
-  color:#fff;
-  text-align:center;
-  padding:18px 20px;
-  letter-spacing:1px;
-  font-weight:700;
-  font-size:0.85rem;
-}
-
+:root{--verde:#1F6E3C;--verde-oscuro:#163E28;--rojo:#B7282E;--crema:#FBF3E7;--texto:#2A2622;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--crema);color:var(--texto);font-family:'Nunito',sans-serif;}
+.top-bar{background:var(--verde-oscuro);color:#fff;text-align:center;padding:14px 20px;font-weight:700;letter-spacing:0.5px;font-size:0.95rem;}
+.nav-wrap{max-width:900px;margin:28px auto 10px;padding:0 20px;}
+.nav-pill{background:var(--rojo);border-radius:999px;display:flex;justify-content:center;gap:6px;padding:8px;flex-wrap:wrap;}
+.nav-pill a{color:#fff;font-weight:700;font-size:1rem;padding:10px 20px;border-radius:999px;text-decoration:none;}
+.nav-pill a.active{background:#fff;color:var(--rojo);}
+.main-content{max-width:980px;margin:0 auto;padding:40px 24px 70px;min-height:55vh;}
+.hero{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;padding:30px 0 10px;}
+.hero-text{text-align:left;}
+.hero .mes{font-family:'Caveat',cursive;font-size:2.6rem;color:var(--texto);margin:0;}
+.hero h1{font-family:'Caveat',cursive;font-weight:700;font-size:5.5rem;line-height:0.85;margin:4px 0 0;}
+.hero h1 .word-mes{color:var(--verde);display:block;}
+.hero h1 .word-patrio{color:var(--rojo);display:block;margin-top:-0.05em;}
+.hero-box{background:var(--rojo);color:#fff;border-radius:20px;padding:28px 30px;max-width:320px;text-align:center;font-size:0.95rem;line-height:1.5;}
+h2.section-title{font-family:'Caveat',cursive;font-weight:700;text-align:center;font-size:3rem;margin:0 0 40px;}
+h2.section-title .g{color:var(--verde);}
+h2.section-title .r{color:var(--rojo);}
+.timeline-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px 18px;}
+@media (max-width:760px){.timeline-cols{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:420px){.timeline-cols{grid-template-columns:1fr;}}
+.date-card{text-align:center;display:flex;flex-direction:column;align-items:center;}
+.date-badge{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Caveat',cursive;font-size:1.7rem;font-weight:700;margin-bottom:22px;}
+.date-card.verde .date-badge{background:var(--verde);}
+.date-card.rojo .date-badge{background:var(--rojo);}
+.date-box{border-radius:16px;padding:20px 16px;height:100%;width:100%;}
+.date-card.verde .date-box{background:var(--verde);color:#fff;}
+.date-card.rojo .date-box{background:var(--rojo);color:#fff;}
+.date-box h3{font-family:'Caveat',cursive;font-size:1.5rem;margin:0 0 8px;}
+.date-box p{margin:0;font-size:0.92rem;line-height:1.45;}
+.people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+@media (max-width:720px){.people-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:480px){.people-grid{grid-template-columns:1fr;}}
+.person-card{border-radius:16px;padding:18px;display:flex;align-items:center;gap:14px;color:#fff;}
+.person-card.verde{background:var(--verde);}
+.person-card.rojo{background:var(--rojo);}
+.avatar{flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:#fff;object-fit:cover;}
+.person-info h3{font-family:'Caveat',cursive;font-size:1.35rem;margin:0 0 4px;}
+.person-info p{margin:0;font-size:0.85rem;line-height:1.35;}
+.facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:640px){.facts-grid{grid-template-columns:1fr;}}
+.fact-card{border-radius:16px;padding:22px 24px;color:#fff;line-height:1.55;font-size:0.95rem;}
+.fact-card.verde{background:var(--verde);}
+.fact-card.rojo{background:var(--rojo);}
+.fact-card strong{display:block;font-family:'Caveat',cursive;font-size:1.3rem;margin-bottom:6px;}
+.pie{background:var(--verde-oscuro);color:#fff;text-align:center;padding:18px 20px;letter-spacing:1px;font-weight:700;font-size:0.85rem;}
