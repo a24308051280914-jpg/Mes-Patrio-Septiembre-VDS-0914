@@ -1,6 +1,4 @@
-SÍÍ 😭 jajaja, quieres los comentarios **mucho más fáciles**, como para explicar qué hace cada cosa en clase. Te dejo **el mismo código, sin mover nada**, solo cambiando los comentarios:
 
-```css
 /* Colores */
 :root{--verde:#1F6E3C;--verde-oscuro:#163E28;--rojo:#B7282E;--crema:#FBF3E7;--texto:#2A2622;}
 
@@ -141,5 +139,4 @@ h2.section-title .r{color:var(--rojo);}
 
 /* Parte de abajo */
 .pie{background:var(--verde-oscuro);color:#fff;text-align:center;padding:18px 20px;letter-spacing:1px;font-weight:700;font-size:0.85rem;}
-```
 
