@@ -1,47 +1,145 @@
+SÍÍ 😭 jajaja, quieres los comentarios **mucho más fáciles**, como para explicar qué hace cada cosa en clase. Te dejo **el mismo código, sin mover nada**, solo cambiando los comentarios:
+
+```css
+/* Colores */
 :root{--verde:#1F6E3C;--verde-oscuro:#163E28;--rojo:#B7282E;--crema:#FBF3E7;--texto:#2A2622;}
+
+/* Ajusta los elementos */
 *{box-sizing:border-box;}
+
+/* Diseño de toda la página */
 body{margin:0;background:var(--crema);color:var(--texto);font-family:'Nunito',sans-serif;}
+
+/* Barra de arriba */
 .top-bar{background:var(--verde-oscuro);color:#fff;text-align:center;padding:14px 20px;font-weight:700;letter-spacing:0.5px;font-size:0.95rem;}
+
+/* Espacio del menú */
 .nav-wrap{max-width:900px;margin:28px auto 10px;padding:0 20px;}
+
+/* Fondo del menú */
 .nav-pill{background:var(--rojo);border-radius:999px;display:flex;justify-content:center;gap:6px;padding:8px;flex-wrap:wrap;}
+
+/* Botones del menú */
 .nav-pill a{color:#fff;font-weight:700;font-size:1rem;padding:10px 20px;border-radius:999px;text-decoration:none;}
+
+/* Botón seleccionado */
 .nav-pill a.active{background:#fff;color:var(--rojo);}
+
+/* Parte principal */
 .main-content{max-width:980px;margin:0 auto;padding:40px 24px 70px;min-height:55vh;}
+
+/* Portada */
 .hero{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;padding:30px 0 10px;}
+
+/* Texto de la portada */
 .hero-text{text-align:left;}
+
+/* Texto "Mes" */
 .hero .mes{font-family:'Caveat',cursive;font-size:2.6rem;color:var(--texto);margin:0;}
+
+/* Título */
 .hero h1{font-family:'Caveat',cursive;font-weight:700;font-size:5.5rem;line-height:0.85;margin:4px 0 0;}
+
+/* "Mes" en verde */
 .hero h1 .word-mes{color:var(--verde);display:block;}
+
+/* "Patrio" en rojo */
 .hero h1 .word-patrio{color:var(--rojo);display:block;margin-top:-0.05em;}
+
+/* Cuadro rojo */
 .hero-box{background:var(--rojo);color:#fff;border-radius:20px;padding:28px 30px;max-width:320px;text-align:center;font-size:0.95rem;line-height:1.5;}
+
+/* Títulos */
 h2.section-title{font-family:'Caveat',cursive;font-weight:700;text-align:center;font-size:3rem;margin:0 0 40px;}
+
+/* Color verde */
 h2.section-title .g{color:var(--verde);}
+
+/* Color rojo */
 h2.section-title .r{color:var(--rojo);}
+
+/* Acomoda las fechas */
 .timeline-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px 18px;}
+
+/* Para pantallas medianas */
 @media (max-width:760px){.timeline-cols{grid-template-columns:repeat(2,1fr);}}
+
+/* Para pantallas pequeñas */
 @media (max-width:420px){.timeline-cols{grid-template-columns:1fr;}}
+
+/* Tarjeta de fecha */
 .date-card{text-align:center;display:flex;flex-direction:column;align-items:center;}
+
+/* Círculo de la fecha */
 .date-badge{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Caveat',cursive;font-size:1.7rem;font-weight:700;margin-bottom:22px;}
+
+/* Círculo verde */
 .date-card.verde .date-badge{background:var(--verde);}
+
+/* Círculo rojo */
 .date-card.rojo .date-badge{background:var(--rojo);}
+
+/* Cuadro de la fecha */
 .date-box{border-radius:16px;padding:20px 16px;height:100%;width:100%;}
+
+/* Cuadro verde */
 .date-card.verde .date-box{background:var(--verde);color:#fff;}
+
+/* Cuadro rojo */
 .date-card.rojo .date-box{background:var(--rojo);color:#fff;}
+
+/* Título de la fecha */
 .date-box h3{font-family:'Caveat',cursive;font-size:1.5rem;margin:0 0 8px;}
+
+/* Texto de la fecha */
 .date-box p{margin:0;font-size:0.92rem;line-height:1.45;}
+
+/* Acomoda los personajes */
 .people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+
+/* Para pantallas medianas */
 @media (max-width:720px){.people-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* Para pantallas pequeñas */
 @media (max-width:480px){.people-grid{grid-template-columns:1fr;}}
+
+/* Tarjeta del personaje */
 .person-card{border-radius:16px;padding:18px;display:flex;align-items:center;gap:14px;color:#fff;}
+
+/* Tarjeta verde */
 .person-card.verde{background:var(--verde);}
+
+/* Tarjeta roja */
 .person-card.rojo{background:var(--rojo);}
+
+/* Foto del personaje */
 .avatar{flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:#fff;object-fit:cover;}
+
+/* Nombre del personaje */
 .person-info h3{font-family:'Caveat',cursive;font-size:1.35rem;margin:0 0 4px;}
+
+/* Información del personaje */
 .person-info p{margin:0;font-size:0.85rem;line-height:1.35;}
+
+/* Acomoda los datos */
 .facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* Para pantallas pequeñas */
 @media (max-width:640px){.facts-grid{grid-template-columns:1fr;}}
+
+/* Tarjeta de datos */
 .fact-card{border-radius:16px;padding:22px 24px;color:#fff;line-height:1.55;font-size:0.95rem;}
+
+/* Tarjeta verde */
 .fact-card.verde{background:var(--verde);}
+
+/* Tarjeta roja */
 .fact-card.rojo{background:var(--rojo);}
+
+/* Título del dato */
 .fact-card strong{display:block;font-family:'Caveat',cursive;font-size:1.3rem;margin-bottom:6px;}
+
+/* Parte de abajo */
 .pie{background:var(--verde-oscuro);color:#fff;text-align:center;padding:18px 20px;letter-spacing:1px;font-weight:700;font-size:0.85rem;}
+```
+
